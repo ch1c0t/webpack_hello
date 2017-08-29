@@ -33,7 +33,11 @@ module.exports =
     ]
   plugins: [
     new html
-      title: "Some title"
+      title: "Main"
+      hash: on
+    new html
+      filename: 'components.html'
+      title: "Bootstrap 4 Components"
       hash: on
     new hello
   ]
