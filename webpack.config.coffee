@@ -21,10 +21,12 @@ load_coffee =
   use: 'coffee-loader'
 
 module.exports =
-  entry: './src/main.coffee'
+  entry:
+    first: './src/main.coffee'
+    second: './src/second_main.coffee'
   output:
     path: "#{__dirname}/dist"
-    filename: 'main.js'
+    filename: '[name].js'
   module:
     rules: [
       load_css
@@ -32,12 +34,20 @@ module.exports =
       load_coffee
     ]
   plugins: [
+    # https://github.com/jantimon/html-webpack-plugin/issues/218#issuecomment-183066602
     new html
       title: "Main"
       hash: on
+      chunks: ['first']
     new html
       filename: 'components.html'
       title: "Bootstrap 4 Components"
       hash: on
+      chunks: ['first']
+    new html
+      filename: 'second.html'
+      title: "Second main"
+      hash: on
+      chunks: ['second']
     new hello
   ]
