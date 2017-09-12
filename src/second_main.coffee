@@ -11,4 +11,5 @@ html = render ->
       li ->
         a 'Another page'
 
-document.body.insertAdjacentHTML 'beforeend', html
+$ = require 'jquery'
+$('body').append html
