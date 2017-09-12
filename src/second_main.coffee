@@ -17,4 +17,5 @@ $ ->
   $('body').append html
 
   $('#menu li').click ->
-    alert $(@).find('a').text()
+    $('#menu li').removeClass 'is-active'
+    $(@).addClass 'is-active'
