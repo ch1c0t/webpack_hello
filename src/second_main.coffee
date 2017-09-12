@@ -1,9 +1,11 @@
 require './second_style.sass'
 
+$ = require 'jquery'
 { render, div, a, ul, li  } = require 'teacup'
+
 html = render ->
   div '.tabs.is-large.is-right', ->
-    ul ->
+    ul '#menu', ->
       li '.is-active', ->
         a 'About'
       li ->
@@ -11,5 +13,8 @@ html = render ->
       li ->
         a 'Another page'
 
-$ = require 'jquery'
-$('body').append html
+$ ->
+  $('body').append html
+
+  $('#menu li').click ->
+    alert $(@).find('a').first().text()
