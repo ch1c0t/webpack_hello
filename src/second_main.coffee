@@ -17,4 +17,4 @@ $ ->
   $('body').append html
 
   $('#menu li').click ->
-    alert $(@).find('a').first().text()
+    alert $(@).find('a').text()
