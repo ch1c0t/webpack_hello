@@ -1,7 +1,7 @@
 require './second_style.sass'
 
 $ = require 'jquery'
-{ render, div, a, ul, li  } = require 'teacup'
+{ render, div, a, ul, li, img  } = require 'teacup'
 
 html = render ->
   div '.tabs.is-large.is-right', ->
@@ -14,9 +14,12 @@ html = render ->
         a 'Another page'
   div '#content'
   
+soviet_car = require './images/soviet_car.jpg'
 pages =
   About: render -> div '1'
-  Portfolio: render -> div '2'
+  Portfolio: render ->
+    div '2'
+    img src: soviet_car
   'Another page': render -> div '3'
 
 update_content = (key) ->

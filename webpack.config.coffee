@@ -20,6 +20,10 @@ load_coffee =
   test: /\.coffee$/
   use: 'coffee-loader'
 
+load_images =
+   test: /\.(png|jpg|gif)$/
+   use: 'file-loader'
+
 module.exports =
   entry:
     first: './src/main.coffee'
@@ -32,6 +36,7 @@ module.exports =
       load_css
       load_sass
       load_coffee
+      load_images
     ]
   plugins: [
     # https://github.com/jantimon/html-webpack-plugin/issues/218#issuecomment-183066602
