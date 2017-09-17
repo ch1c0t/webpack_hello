@@ -14,7 +14,7 @@ html = render ->
         a 'Another page'
   div '#content'
   
-images = require.context './images', no
+images = require.context './images'
 pages =
   About: render -> div '1'
   Portfolio: render ->
