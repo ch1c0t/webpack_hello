@@ -14,12 +14,14 @@ html = render ->
         a 'Another page'
   div '#content'
   
-soviet_car = require './images/soviet_car.jpg'
+images = require.context './images', no
 pages =
   About: render -> div '1'
   Portfolio: render ->
     div '2'
-    img src: soviet_car
+    for image in images.keys()
+      div '.image-path', image
+      img src: images image
   'Another page': render -> div '3'
 
 update_content = (key) ->
