@@ -1,7 +1,7 @@
 require './second_style.sass'
 
 $ = require 'jquery'
-{ render, div, a, ul, li, img  } = require 'teacup'
+{ render, div, a, ul, li, img, figure } = require 'teacup'
 
 html = render ->
   div '.tabs.is-large.is-right', ->
@@ -23,7 +23,18 @@ pages =
       for image in images.keys()
         div '.column.is-4', ->
           div '.image-path', image
-          img src: images image
+          div '.card', ->
+            div '.card-image', ->
+              figure '.image.is-4by3', ->
+                img src: images image
+    div '.columns', ->
+      for image in images.keys()
+        div '.column.is-4', ->
+          div '.image-path', image
+          div '.card', ->
+            div '.card-image', ->
+              figure '.image.is-4by3', ->
+                img src: images image
   'Another page': render -> div '3'
 
 update_content = (key) ->
