@@ -19,9 +19,11 @@ pages =
   About: render -> div '1'
   Portfolio: render ->
     div '2'
-    for image in images.keys()
-      div '.image-path', image
-      img src: images image
+    div '.columns', ->
+      for image in images.keys()
+        div '.column.is-4', ->
+          div '.image-path', image
+          img src: images image
   'Another page': render -> div '3'
 
 update_content = (key) ->
