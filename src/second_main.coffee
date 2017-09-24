@@ -34,8 +34,12 @@ pages =
     image_row_with images
   'Another page': render ->
     div '3'
+    div '<'
+    div '>'
     div '.ligthbox', onclick: "this.style.display = 'none'", ->
+      div '.arrow', '<'
       img src: images './low_row.jpg'
+      div '.arrow', '>'
 
 update_content = (key) ->
   $('#content').html pages[key]
