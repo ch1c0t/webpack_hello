@@ -32,7 +32,9 @@ pages =
     div '2'
     image_row_with images
     image_row_with images
-  'Another page': render -> div '3'
+  'Another page': render ->
+    div '3'
+    div '.ligthbox'
 
 update_content = (key) ->
   $('#content').html pages[key]
