@@ -34,7 +34,7 @@ pages =
     image_row_with images
   'Another page': render ->
     div '3'
-    div '.ligthbox'
+    div '.ligthbox', onclick: "this.style.display = 'none'"
 
 update_content = (key) ->
   $('#content').html pages[key]
