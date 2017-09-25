@@ -1,7 +1,7 @@
 require './second_style.sass'
 
 $ = require 'jquery'
-{ renderable, render, div, a, ul, li, img, figure } = require 'teacup'
+{ renderable, render, div, a, ul, li, img, figure, button } = require 'teacup'
 
 html = render ->
   div '.tabs.is-large.is-right', ->
@@ -34,16 +34,17 @@ pages =
     image_row_with images
   'Another page': render ->
     div '3'
-    div '<'
-    div '>'
     div '.ligthbox', onclick: "this.style.display = 'none'", ->
-      div '.arrow', '<'
-      img src: images './low_row.jpg'
-      div '.arrow', '>'
+      div '.columns', ->
+        div '.column.is-1', ->
+          button '.button.is-medium.is-dark', '<'
+        div '.column.is-10', ->
+          img src: images './low_row.jpg'
+        div '.column.is-1', ->
+          button '.button.is-medium.is-dark', '>'
 
 update_content = (key) ->
   $('#content').html pages[key]
-
 
 $ ->
   $('body').append html
