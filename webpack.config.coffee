@@ -18,7 +18,10 @@ load_sass =
 
 load_coffee =
   test: /\.coffee$/
-  use: 'coffee-loader'
+  use: [
+    'babel-loader'
+    'coffee-loader'
+  ]
 
 load_images =
    test: /\.(png|jpg|gif)$/
