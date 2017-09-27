@@ -31,6 +31,7 @@ module.exports =
   entry:
     first: './src/main.coffee'
     second: './src/second_main.coffee'
+    vue: './src/vue_main.coffee'
   output:
     path: "#{__dirname}/dist"
     filename: '[name].js'
@@ -57,5 +58,11 @@ module.exports =
       title: "Second main"
       hash: on
       chunks: ['second']
+    new html
+      filename: 'vue.html'
+      template: '!!pug-loader!src/templates/index.pug'
+      title: 'Title with Vue'
+      hash: on
+      chunks: ['vue']
     new hello
   ]

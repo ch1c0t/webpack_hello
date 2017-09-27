@@ -15,9 +15,14 @@
     "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "teacup": "^2.0.0",
+    "vue": "^2.4.4",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0"
   }
 }
