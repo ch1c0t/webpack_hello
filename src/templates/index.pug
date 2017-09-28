@@ -4,12 +4,10 @@ head
   title Title for Vue App
 body
   #main
-    .tabs.is-large.is-right
-      ul
-        li
-          router-link(to="/") About
-        li
-          router-link(to="/portfolio") Portfolio
+    nav
+      .nav-right
+        router-link.nav-item.is-tab(to="/") About
+        router-link.nav-item.is-tab(to="/portfolio") Portfolio
 
     p Hello app
 

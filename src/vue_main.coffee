@@ -15,7 +15,8 @@ Portfolio =
   component:
     template: '<div>bar</div>'
 
-router = new Router [About, Portfolio]
+router = new Router
+  routes: [About, Portfolio]
 
 app = new Vue { router }
 app.$mount '#main'
