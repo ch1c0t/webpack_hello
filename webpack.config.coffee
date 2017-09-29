@@ -27,6 +27,10 @@ load_images =
    test: /\.(png|jpg|gif)$/
    use: 'file-loader'
 
+load_vue_components =
+  test: /\.vue$/
+  use: 'vue-loader'
+
 module.exports =
   entry:
     first: './src/main.coffee'
@@ -41,6 +45,7 @@ module.exports =
       load_sass
       load_coffee
       load_images
+      load_vue_components
     ]
   plugins: [
     # https://github.com/jantimon/html-webpack-plugin/issues/218#issuecomment-183066602

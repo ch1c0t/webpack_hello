@@ -7,8 +7,7 @@ Vue.use Router
 
 About =
   path: '/'
-  component:
-    template: '<div>foo</div>'
+  component: require './components/About.vue'
 
 Portfolio =
   path: '/portfolio'
