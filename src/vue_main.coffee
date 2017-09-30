@@ -7,7 +7,7 @@ Vue.use Router
 
 About =
   path: '/'
-  component: require './components/About.vue'
+  component: require('./components/About.vue').default
 
 Portfolio =
   path: '/portfolio'
