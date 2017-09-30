@@ -2,12 +2,8 @@
 <p>{{message}} from single-file vue component.</p>
 </template>
 
-<script>
-export default {
-  date () {
-    return {
-      message: "Hello"
-    }
-  }
-}
+<script lang="coffee">
+module.exports =
+  data: ->
+    message: "Hello"
 </script>
