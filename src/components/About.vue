@@ -1,9 +1,2 @@
-<template>
-<p>{{message}} from single-file vue component.</p>
-</template>
-
-<script lang="coffee">
-module.exports =
-  data: ->
-    message: "Hello"
-</script>
+<template src="./About/template.html"></template>
+<script lang="coffee" src="./About/script.coffee"></script>
