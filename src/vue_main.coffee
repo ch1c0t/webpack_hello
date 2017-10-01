@@ -11,11 +11,11 @@ About =
 
 Portfolio =
   path: '/portfolio'
-  component:
-    template: '<div>bar</div>'
+  component: require('./components/Portfolio.vue').default
 
 router = new Router
   routes: [About, Portfolio]
 
-app = new Vue { router }
+App = require('./components/App.vue').default
+app = new Vue { router, render: (h) -> h App }
 app.$mount '#main'

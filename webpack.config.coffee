@@ -71,6 +71,3 @@ module.exports =
       chunks: ['vue']
     new hello
   ]
-  resolve:
-    alias:
-      'vue$': 'vue/dist/vue.esm.js'
