@@ -20,6 +20,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "teacup": "^2.0.0",
+    "v-img": "^0.1.2",
     "vue": "^2.4.4",
     "vue-loader": "^13.0.5",
     "vue-router": "^2.7.0",

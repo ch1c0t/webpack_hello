@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Img from 'v-img'
 
 require './vue_style.sass'
 
 Vue.use Router
+Vue.use Img
 
 About =
   path: '/'
