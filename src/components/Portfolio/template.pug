@@ -1,3 +1,6 @@
-div
-  p Some {{message}}.
-  p {{images}}
+.columns
+  div.column.is-4(v-for="image in images")
+    .card
+      .card-image
+        figure.image.is-4by3
+          img(:src="image")
