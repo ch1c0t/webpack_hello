@@ -1,6 +1,7 @@
-.columns
-  .column.is-4(v-for="image in images")
-    .card
-      .card-image
-        figure.image.is-4by3
-          img(v-img :src="image")
+div
+  .columns(v-for="group in image_groups")
+    .column.is-4(v-for="image in group")
+      .card
+        .card-image
+          figure.image.is-4by3
+            img(v-img :src="image")
